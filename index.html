@@ -46,6 +46,11 @@
     color:var(--paper);
     text-shadow:6px 6px 0 var(--red);
   }
+  .hero .meme{
+    display:block;margin:0 auto 34px;width:min(320px,80%);
+    border-radius:16px;border:4px solid var(--paper);
+    box-shadow:8px 8px 0 var(--red);transform:rotate(-1.5deg);
+  }
   .hero .ticker{
     display:inline-block;margin-top:18px;
     font-family:"Noto Sans SC";font-weight:900;
@@ -162,6 +167,7 @@
   </nav>
 
   <header class="hero">
+    <img class="meme" src="logo.png" alt="Hit the road, dude" onerror="this.style.display='none'">
     <h1 class="zh" id="coinName">赶紧滚蛋,<br>哥们儿</h1>
     <div class="ticker zh" id="tickerTag">$州立土地</div>
     <div class="tag">HIT THE ROAD, DUDE.</div>
@@ -206,8 +212,8 @@
     <h2>The <span class="hl">lore</span></h2>
     <div class="lore">
       <p class="big zh">赶紧滚蛋, 哥们儿。</p>
-      <p>Roughly: "Get lost already, bro." It's what you say to the bad trade, the bad ex, the boss who keeps adding meetings, and the coin that rugged you last week.</p>
-      <p>No roadmap. No promises. Just one dude, one bindle, and a long road out of here. Pack your bag and walk.</p>
+      <p>"Hit the road, dude." The meme is one guy, one bindle, walking off without looking back.</p>
+      <p>Paper hands? <span class="zh">赶紧滚蛋。</span> Red candle? <span class="zh">赶紧滚蛋。</span> We don't argue. We just point at the road.</p>
     </div>
   </section>
 
@@ -235,7 +241,6 @@
     <h2>Join the <span class="hl">road trip</span></h2>
     <div class="socials">
       <a id="xLink" href="#" target="_blank" rel="noopener">X / Twitter</a>
-      <a id="tgLink" href="#" target="_blank" rel="noopener">Telegram</a>
       <a id="chartLink" href="#" target="_blank" rel="noopener">Chart</a>
     </div>
   </section>
@@ -250,11 +255,10 @@
 <script>
   // ===== EDIT THESE =====
   const CONFIG = {
-    contractAddress: "",          // paste your CA after launch
-    pumpFunUrl: "",               // e.g. https://pump.fun/coin/<CA>
-    twitterUrl: "",
-    telegramUrl: "",
-    chartUrl: ""                  // e.g. a DexScreener link
+    contractAddress: "6B6Umx7GCiuvrvsdQNXLPWGwFBQ7WPmrMn6p3856pump",
+    pumpFunUrl: "https://pump.fun/coin/6B6Umx7GCiuvrvsdQNXLPWGwFBQ7WPmrMn6p3856pump",
+    twitterUrl: "https://x.com/hittheroadchina",
+    chartUrl: "https://dexscreener.com/solana/6B6Umx7GCiuvrvsdQNXLPWGwFBQ7WPmrMn6p3856pump"
   };
   // ======================
 
@@ -265,7 +269,6 @@
   };
   setLink("buyBtn", CONFIG.pumpFunUrl);
   setLink("xLink", CONFIG.twitterUrl);
-  setLink("tgLink", CONFIG.telegramUrl);
   setLink("chartLink", CONFIG.chartUrl);
 
   const caText = document.getElementById("caText");
